@@ -11,7 +11,7 @@ namespace WooliesXTest.Controllers
         // GET: Home
         public JsonResult Index()
         {
-            var x = new { name = "test", token = "1234-455662-22233333-3333" };
+            var x = new { name = "David Klempfner", token = "0880a9fd-0906-4b17-ba88-88750753a165" };
             return Json(x, JsonRequestBehavior.AllowGet);
         }
     }

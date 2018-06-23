@@ -11,7 +11,7 @@ namespace WooliesXTest.Controllers
         // GET: Home
         public string Index()
         {
-            return "hi";
+            return "hello";
         }
     }
 }

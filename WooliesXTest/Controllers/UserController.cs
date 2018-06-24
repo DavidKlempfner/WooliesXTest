@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using WooliesXTest.Constants;
 
 namespace WooliesXTest.Controllers
 {
@@ -11,7 +8,7 @@ namespace WooliesXTest.Controllers
         // GET: Home
         public JsonResult Index()
         {
-            var x = new { name = "David Klempfner", token = "0880a9fd-0906-4b17-ba88-88750753a165" };
+            var x = new { name = GenericConstants.Name, token = GenericConstants.Token };
             return Json(x, JsonRequestBehavior.AllowGet);
         }
     }

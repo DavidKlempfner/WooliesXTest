@@ -28,7 +28,7 @@ namespace WooliesXTest.Services
 
         public List<RecommendedProducts> GetRecommendedProducts()
         {
-            string recommendedProductsUrl = GetRecommendedProductsUrl();
+            string recommendedProductsUrl = GetShopperHistoryUrl();
             string jsonString = _apiHelper.GetJsonResponseString(recommendedProductsUrl);
             List<RecommendedProducts> recommendedProducts = JsonConvert.DeserializeObject<List<RecommendedProducts>>(jsonString);
             return recommendedProducts;
@@ -46,7 +46,7 @@ namespace WooliesXTest.Services
             return GetUrl(GenericConstants.BaseUrl, "products", GenericConstants.Token);
         }
 
-        private string GetRecommendedProductsUrl()
+        private string GetShopperHistoryUrl()
         {
             return GetUrl(GenericConstants.BaseUrl, "shopperHistory", GenericConstants.Token);
         }

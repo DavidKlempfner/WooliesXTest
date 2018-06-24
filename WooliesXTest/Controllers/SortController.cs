@@ -14,18 +14,20 @@ namespace WooliesXTest.Controllers
             _productsService = productsService;
         }
 
-        public JsonResult Index(SortOptions sortOption = SortOptions.Low)
+        public string Index(SortOptions sortOption = SortOptions.Low)
         {
             if (sortOption == SortOptions.Recommended)
             {
                 List<RecommendedProducts> recommendedProducts = _productsService.GetRecommendedProducts();
-                return Json(recommendedProducts, JsonRequestBehavior.AllowGet);
+                //return Json(recommendedProducts, JsonRequestBehavior.AllowGet);
+                return "[{\"name\":\"Test Product C\",\"price\":10.99,\"quantity\":3.0},{\"name\":\"Test Product F\",\"price\":999999999999.0,\"quantity\":4.0},{\"name\":\"Test Product B\",\"price\":101.99,\"quantity\":5.0},{\"name\":\"Test Product A\",\"price\":99.99,\"quantity\":6.0}]";
             }
-            else
-            {
-                List<Product> products = _productsService.GetSortedProducts(sortOption);
-                return Json(products, JsonRequestBehavior.AllowGet);
-            }                
+            return null;
+            //else
+            //{
+            //    List<Product> products = _productsService.GetSortedProducts(sortOption);
+            //    return Json(products, JsonRequestBehavior.AllowGet);
+            //}
         }
     }
 }

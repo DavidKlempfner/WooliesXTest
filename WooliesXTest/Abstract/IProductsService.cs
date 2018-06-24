@@ -6,6 +6,7 @@ namespace WooliesXTest.Abstract
 {
     public interface IProductsService
     {
-        List<Product> GetProducts(SortOptions sortOption);        
+        List<Product> GetSortedProducts(SortOptions sortOption);
+        List<RecommendedProducts> GetRecommendedProducts();
     }
 }

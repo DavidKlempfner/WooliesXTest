@@ -16,8 +16,16 @@ namespace WooliesXTest.Controllers
 
         public JsonResult Index(SortOptions sortOption = SortOptions.Low)
         {
-            List<Product> products = _productsService.GetProducts(sortOption);
-            return Json(products, JsonRequestBehavior.AllowGet);
+            if (sortOption == SortOptions.Recommended)
+            {
+                List<RecommendedProducts> recommendedProducts = _productsService.GetRecommendedProducts();
+                return Json(recommendedProducts, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                List<Product> products = _productsService.GetSortedProducts(sortOption);
+                return Json(products, JsonRequestBehavior.AllowGet);
+            }                
         }
     }
 }

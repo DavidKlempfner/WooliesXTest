@@ -23,6 +23,7 @@ namespace WooliesXTest.Services
                 case SortOptions.Descending:
                     return products.OrderByDescending(x => x.Name).ToList();
                 case SortOptions.Recommended:
+                    //Move recommended logic here once this requirement is understood.
                     break;
                 default:
                     throw new Exception("Need to update switch statement.");

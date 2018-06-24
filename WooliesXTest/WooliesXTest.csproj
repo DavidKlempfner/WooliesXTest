@@ -118,6 +118,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Constants\GenericConstants.cs" />
     <Compile Include="Controllers\SortController.cs" />
+    <Compile Include="Controllers\TrolleyCalculatorController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Enums\SortOptions.cs" />
     <Compile Include="Global.asax.cs">
@@ -145,6 +146,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Sort\" />
+    <Folder Include="Views\TrolleyCalculator\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
